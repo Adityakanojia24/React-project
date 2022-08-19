@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Clock = () => {
   const [time, settime] = useState(new Date().toLocaleTimeString());
-  const [day, setday] = useState(new Date().toLocaleDateString());
+  const [day] = useState(new Date().toLocaleDateString());
 
   const updatetime = () => {
     settime(new Date().toLocaleTimeString());

@@ -2,6 +2,7 @@ import React from 'react';
 
 import Navbar from './components/navbar';
 import Center from './components/center';
+import Timer from './components/timer';
 import List from './components/list';
 import Home from './components/home';
 import Footer from './components/footer';
@@ -14,6 +15,7 @@ const App=()=>{
      <Navbar/>
     <Center/>
     <List/>
+    <Timer/>
     <Home/>
     <Footer/>
    

@@ -1,20 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
-const center = ()=> {
-    return (
+const Center = () => {
+  const [counter, setcounter] = useState(0);
+  
+  const handleincrement = () => {
+    setcounter(counter + 1);
+    };
+  const handledecrement = () => {
+    setcounter(counter - 1);
+    };
+  return (
     <>
-   <div className="card" style={{width: "18rem"}}>
-  <img src="https://picsum.photos/200" className="card-img-top" alt="hello"/>
-  <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/" className="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+      <h1>
+        Current Counter : <span style={{ color: "blue" }}>{counter}</span>
+      </h1>
+
+      <div className="row">
+        <div className="col">
+          <button
+            style={{ backgroundColor: "green", color: "white" }}
+            className="btn-primary"
+            onClick={() => handleincrement()}
+          >
+            Increase counter
+          </button>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <button
+            style={{ backgroundColor: "red", color: "white" }}
+            className="btn-primary"
+            onClick={() => handledecrement()}
+          >
+            Decrease counter
+          </button>
+        </div>
+      </div>
     </>
-
-    );
-
+  );
 };
- export default center;
- 
+
+export default Center;

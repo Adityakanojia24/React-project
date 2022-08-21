@@ -10,7 +10,8 @@ import React, { useState } from "react";
 // import Footer from './components/footer';
 // import Test from './components/practise';
 // import Practisetest from './components/practiseeffect';
-import CondComp from './components/condcomp';
+// import CondComp from './components/condcomp';
+import Ternary from "./components/ternary";
 
 
 const App=()=>{
@@ -32,7 +33,8 @@ const App=()=>{
     {/* <Home/> */}
     {/* <Footer/> */}
    {/* {<Practisetest/>} */}
-   <CondComp/>
+   {/* <CondComp/> */}
+   <Ternary/>
    </>
   );
 }

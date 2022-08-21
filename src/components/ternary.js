@@ -1,25 +1,53 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-const Inc = () => {
+const Ternary = () => 
+{
   const [counter, setcounter] = useState(0);
 
-  useEffect(() => {
-    console.log("counter value changed!"); // sideeffect function
-  }, [counter]); // sideeffect of what?
-  return (
-    <div>
-      <h1>{counter}</h1>
-      {/* <p> High </p>  if >10
-      <p> Medium </p> if <10 and >5
-      <p> Low </p> if <5 */}
-      <button
-        style={{ backgroundColor: "blue" }}
-        onClick={() => setcounter(counter + 1)}
-      >
-        Increment
-      </button>
-    </div>
-  );
+  
+  const countinc=()=>
+{
+    setcounter(counter + 1)
 };
 
-export default Inc;
+const countdecs=()=>
+{
+    setcounter(counter-1)
+};
+
+  return (
+  <>
+    <div >
+      <h1>COUNTER: {counter}</h1>
+
+   {(counter <=5) ? 
+      <h1>STATUS:<span style={{color:"pink"}}>low</span></h1> 
+    :
+    (counter >5 && counter <=10) ?
+    <h1>STATUS :<span style={{color:"blue"}}>medium</span></h1>
+    :
+    //  (counter >=10 )
+    <h1>STATUS :<span style={{color:"yellow"}}>high</span></h1>
+    }
+    <button 
+     style={{ backgroundColor: "green", color: "black" }}
+     className="btn-primary"
+      onClick={() => countinc()}
+    >click to increase counter
+    </button>
+
+    <br/>
+
+    <button 
+     style={{ backgroundColor: "red", color: "black" }}
+     className="btn-primary"
+      onClick={() => countdecs()}
+    >click to decrease counter
+    </button>
+    
+
+      </div>
+      </> );
+};
+
+export default Ternary;
